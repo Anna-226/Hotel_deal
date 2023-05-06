@@ -1,0 +1,187 @@
+.first-screen {
+  background: #eaeff6;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  // .first-screen__container
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  // .first-screen__left-column
+
+  &__left-column {
+    flex: 0 0 50%;
+  }
+
+  // .first-screen__title
+
+  &__title {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 122%;
+    color: #3d4550;
+    margin-bottom: 16px;
+  }
+
+  // .first-screen__text
+
+  &__text {
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.02em;
+    color: #939393;
+
+    margin-bottom: 36px;
+  }
+
+  // .first-screen__buttons
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 54px;
+  }
+
+  // .first-screen__button-video
+
+  &__button-video {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: 0.02em;
+    color: #353637;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    &::before {
+      content: "";
+      transition: all 0.3s ease 0s;
+      width: 40px;
+      height: 40px;
+      background: url("../assets/img/icons/play_button.svg") center -8px / 160% no-repeat;
+    }
+
+    &:hover {
+		&::before {
+      fill: #6682a8;
+      color: #d8d8d8;
+		}
+    }
+  }
+
+  // .first-screen__right-column
+
+  &__right-column {
+    flex: 0 0 50%;
+    position: relative;
+  }
+
+  // .first-screen__main-img
+
+  &__main-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    & img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+  }
+
+  // .first-screen__payment
+
+  &__payment {
+    position: absolute;
+    right: -50%;
+    top: 50%;
+    z-index: 10;
+  }
+
+  // .first-screen__overview
+
+  &__overview {
+    position: absolute;
+  }
+}
+.payment {
+  // .payment__icon
+
+  &__icon {
+  }
+
+  // .payment__tiile
+
+  &__tiile {
+  }
+
+  // .payment__sibtitle
+
+  &__sibtitle {
+  }
+}
+.overview {
+  // .overview__title
+
+  &__title {
+  }
+
+  // .overview__subtitle
+
+  &__subtitle {
+  }
+
+  // .overview__diagram
+
+  &__diagram {
+  }
+
+  // .overview__tabs
+
+  &__tabs {
+  }
+}
+.subtitle-overview {
+  // .subtitle-overview__text
+
+  &__text {
+  }
+
+  // .subtitle-overview__rate
+
+  &__rate {
+  }
+}
+.diagram {
+  // .diagram__img
+
+  &__img {
+  }
+
+  // .diagram__point
+
+  &__point {
+  }
+}
+.tabs {
+  // .tabs__navigation
+
+  &__navigation {
+  }
+
+  // .tabs__title
+
+  &__title {
+    // .tabs__title_tab-active
+
+    &_tab-active {
+    }
+  }
+}
+
+@import "./common";

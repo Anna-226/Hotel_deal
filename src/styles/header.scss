@@ -1,0 +1,176 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #EAEFF6;
+    transition: all 0.3s ease 0s;
+  }
+  // .header__container
+
+  &__container {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  // .header__logo
+
+  &__logo {
+    width: 170px;
+    height: 65.4px;
+    position: relative;
+    z-index: 1;
+    & img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 18px;
+      left: 0;
+    }
+  }
+
+  // .header__menu
+
+  &__menu {
+    font-size: 18px;
+    line-height: 144%;
+    z-index: 1;
+  }
+
+  // .header__buttons
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+  }
+}
+.menu {
+  // .menu__body
+
+  &__body {
+  }
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+      position: fixed;
+      top: 105px;
+      right: -100%;
+      height: 100%;
+      background-color: #ffffff;
+      font-size: 20px;
+      padding: 20px 40px;
+      transition: all 0.3s ease 0s;
+    }
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+    .menu-open & {
+      right: 0;
+      overflow: auto;
+    }
+  }
+
+  // .menu__item
+
+  &__item {
+    color: #353637;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      background-color: #597193;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+    }
+    &:hover {
+      color: #597193;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  // .menu__link
+
+  &__link {
+  }
+
+  // .menu__icon
+
+  &__icon {
+  }
+}
+.icon-menu {
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - 1px);
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - 1px);
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - 1px);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+@import "./common";
